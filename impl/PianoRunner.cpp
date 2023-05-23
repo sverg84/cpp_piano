@@ -1,6 +1,7 @@
 #include <memory>
 #include <SFML/Graphics.hpp>
 #include "../include/PianoRunner.hpp"
+#include "../include/namespace_piano.hpp"
 
 
 struct PianoRunner::PianoRunnerInternals {
@@ -10,7 +11,7 @@ struct PianoRunner::PianoRunnerInternals {
 
 
 PianoRunner::PianoRunner(void): 
-    window(sf::VideoMode(1920, 1080), "SFML"),
+    window(sf::VideoMode(piano::WIDTH, piano::HEIGHT), "SFML"),
     ptr(std::make_unique<PianoRunner::PianoRunnerInternals>()) {}
 
 PianoRunner::~PianoRunner(void) {}

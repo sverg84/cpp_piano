@@ -1,9 +1,10 @@
 #include "../include/PianoKey.hpp"
+#include "../include/namespace_piano.hpp"
 
 PianoKey::PianoKey(void) {
     // all placeholder / proof-of-concept
     rect.setFillColor(sf::Color::Blue);
-    rect.setSize({100, 100});
+    rect.setSize({100, piano::HEIGHT});
     rect.setOutlineColor(sf::Color::Black);
 }
 
