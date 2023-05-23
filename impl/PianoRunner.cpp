@@ -1,13 +1,11 @@
 #include <SFML/Graphics.hpp>
 #include "../include/PianoRunner.hpp"
 
-PianoRunner::PianoRunner(void) {}
+PianoRunner::PianoRunner(void): window(sf::VideoMode(1920, 1080), "SFML") {}
 
 PianoRunner::~PianoRunner(void) {}
 
 void PianoRunner::run() {
-    sf::RenderWindow window(sf::VideoMode(1920, 1080), "SFML");
-
     while (window.isOpen()) {
         sf::Event event;
         while (window.pollEvent(event)) {
