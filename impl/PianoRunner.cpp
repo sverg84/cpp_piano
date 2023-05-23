@@ -5,7 +5,7 @@
 
 struct PianoRunner::PianoRunnerInternals {
     void eventHandler(sf::RenderWindow& window);
-    void render(sf::RenderWindow& window);
+    void render(sf::RenderWindow& window, Piano& piano);
 };
 
 
@@ -18,6 +18,7 @@ PianoRunner::~PianoRunner(void) {}
 void PianoRunner::run() {
     while (window.isOpen()) {
         ptr->eventHandler(window);
+        ptr->render(window, piano);
     }
 }
 
@@ -42,7 +43,8 @@ void PianoRunner::PianoRunnerInternals::eventHandler(sf::RenderWindow& window) {
     }
 }
 
-void PianoRunner::PianoRunnerInternals::render(sf::RenderWindow& window) {
+void PianoRunner::PianoRunnerInternals::render(sf::RenderWindow& window, Piano& piano) {
     window.clear(sf::Color::White);
+    piano.render(window);
     window.display();
 }

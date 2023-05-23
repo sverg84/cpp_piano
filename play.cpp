@@ -1,4 +1,3 @@
-#include <iostream>
 #include "include/PianoRunner.hpp"
 
 int main() {
