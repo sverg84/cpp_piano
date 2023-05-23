@@ -6,6 +6,7 @@ PianoKey::PianoKey(void) {
     rect.setFillColor(sf::Color::Blue);
     rect.setSize({100, piano::HEIGHT});
     rect.setOutlineColor(sf::Color::Black);
+    rect.setOutlineThickness(piano::KEY_OUTLINE_THICKNESS);
 }
 
 PianoKey::~PianoKey(void) {}

@@ -1,5 +1,4 @@
 #include <memory>
-#include <SFML/Graphics.hpp>
 #include "Piano.hpp"
 
 #ifndef PIANO_RUNNER_HPP

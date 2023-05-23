@@ -1,3 +1,4 @@
+#include <iostream>
 #include <memory>
 #include <SFML/Graphics.hpp>
 #include "../include/PianoRunner.hpp"
@@ -38,6 +39,11 @@ void PianoRunner::PianoRunnerInternals::eventHandler(sf::RenderWindow& window) {
                     default:
                         break;
                 }
+            case sf::Event::MouseButtonPressed:
+                if (event.mouseButton.button == sf::Mouse::Left) {
+                    std::cout << event.mouseButton.x << std::endl;
+                }
+                break;
             default:
                 break;
         }
