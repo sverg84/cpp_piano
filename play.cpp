@@ -9,6 +9,16 @@ const option longopts[] {
     {0, 0, 0, 0},
 };
 
+void printHelp() {
+    std::cout << "virtual piano (WIP) :o\n"
+        << "Usage:\n"
+        << "make && ./main [--num-keys <int>] [--help]\n\n"
+        << "Arguments:\n"
+        << "--num-keys <int> (-n <int>):\tSpecify the number of white piano keys to render.\n"
+        << "\t\t\t\t(Defaults to rendering 8 white keys if not specified)\n"
+        << "--help (-h):\t\t\tPrint this message and exit." << std::endl;
+}
+
 int main(int argc, char** argv) {
     int numKeys = piano::NUM_KEYS_DEFAULT;
 
@@ -27,7 +37,7 @@ int main(int argc, char** argv) {
                 numKeys = std::stoi(optarg);
                 break;
             case 'h':
-                std::cout << "help" << std::endl;
+                printHelp();
                 return 0;
             default:
                 break;
