@@ -33,7 +33,7 @@ void PianoRunner::PianoRunnerInternals::eventHandler(sf::RenderWindow& window) {
                 break;
             case sf::Event::KeyPressed:
                 switch (event.key.code) {
-                    case sf::Keyboard::Q:
+                    case sf::Keyboard::Escape:
                         window.close();
                         break;
                     default:
