@@ -1,15 +1,15 @@
 CC = g++
 CFLAGS = -c -Wall -Werror -Wextra -std=gnu++17
-EXE = main
+EXE = piano
 SFML_INCLUDE_PATH = -I /opt/homebrew/Cellar/sfml/2.5.1_2/include
 SFML_LIB_PATH = -L /opt/homebrew/Cellar/sfml/2.5.1_2/lib
 SFML_LINK = -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 
 ${EXE}: main.o Note.o Piano.o PianoKey.o PianoRunner.o BlackPianoKey.o WhitePianoKey.o
-	${CC} *.o -o main ${SFML_LIB_PATH} ${SFML_LINK}
+	${CC} *.o -o ${EXE} ${SFML_LIB_PATH} ${SFML_LINK}
 
-main.o: play.cpp
-	${CC} ${CFLAGS} play.cpp -o main.o ${SFML_INCLUDE_PATH}
+main.o: piano.cpp
+	${CC} ${CFLAGS} piano.cpp -o main.o ${SFML_INCLUDE_PATH}
 
 Note.o: impl/Note.cpp
 	${CC} ${CFLAGS} impl/Note.cpp -o Note.o ${SFML_INCLUDE_PATH}
