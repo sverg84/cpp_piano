@@ -7,7 +7,6 @@ class BlackPianoKey : public PianoKey {
     public:
         BlackPianoKey(
             PianoKey& other,
-            const float& keyWidth,
             const sf::Keyboard::Key& key
         );
 };

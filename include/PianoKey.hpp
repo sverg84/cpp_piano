@@ -6,7 +6,6 @@
 class PianoKey {
     public:
         PianoKey(
-            const float& keyWidth,
             const float& positionX,
             const sf::Keyboard::Key& key,
             const sf::Color& color
@@ -14,11 +13,9 @@ class PianoKey {
 
         virtual ~PianoKey();
 
-        virtual void render(sf::RenderTarget& renderTarget);
-
         virtual const sf::Vector2f& getPosition();
 
-        virtual const sf::Vector2f& getSize();
+        virtual void render(sf::RenderTarget& renderTarget);
 
     protected:
         sf::RectangleShape rect;

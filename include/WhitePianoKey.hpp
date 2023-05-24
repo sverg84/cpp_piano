@@ -6,7 +6,6 @@
 class WhitePianoKey : public PianoKey {
     public:
         WhitePianoKey(
-            const float& keyWidth,
             const float& positionX,
             const sf::Keyboard::Key& key
         );
