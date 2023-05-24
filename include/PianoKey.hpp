@@ -5,9 +5,9 @@
 
 class PianoKey {
     public:
-        PianoKey();
+        PianoKey(const float& keyWidth, const float& positionX);
 
-        ~PianoKey();
+        virtual ~PianoKey();
 
         virtual void render(sf::RenderTarget& renderTarget);
 

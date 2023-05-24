@@ -7,12 +7,12 @@ class Piano {
     public:
         Piano();
 
-        ~Piano();
+        virtual ~Piano();
 
         virtual void render(sf::RenderTarget& renderTarget);
 
     private:
-        PianoKey pianoKey;
+        std::vector<PianoKey> pianoKeys;
 };
 
 #endif
