@@ -9,7 +9,7 @@ class Piano {
 
         virtual ~Piano();
 
-        virtual void render(sf::RenderTarget& renderTarget);
+        void render(sf::RenderTarget& renderTarget);
 
     private:
         std::vector<PianoKey> pianoKeys;

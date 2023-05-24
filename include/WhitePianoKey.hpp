@@ -7,7 +7,8 @@ class WhitePianoKey : public PianoKey {
     public:
         WhitePianoKey(
             const float& positionX,
-            const sf::Keyboard::Key& key
+            const sf::Keyboard::Key& key,
+            const piano::SEMITONES_FROM_MIDDLE_A& semitone
         );
 };
 

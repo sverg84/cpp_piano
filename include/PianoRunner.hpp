@@ -11,7 +11,7 @@ class PianoRunner {
 
         virtual ~PianoRunner();
 
-        virtual void run();
+        void run();
 
     private:
         sf::RenderWindow window;
@@ -20,6 +20,8 @@ class PianoRunner {
 
         struct PianoRunnerInternals;
         std::unique_ptr<PianoRunnerInternals> ptr;
+
+        bool isInFocus = false;
 };
 
 

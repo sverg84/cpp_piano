@@ -7,7 +7,8 @@ class BlackPianoKey : public PianoKey {
     public:
         BlackPianoKey(
             PianoKey& other,
-            const sf::Keyboard::Key& key
+            const sf::Keyboard::Key& key,
+            const piano::SEMITONES_FROM_MIDDLE_A& semitone
         );
 };
 
